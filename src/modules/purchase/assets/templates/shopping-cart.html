@@ -1,0 +1,161 @@
+<div id="bpt-shopping-cart">
+    <h1>Shopping Cart</h1>
+    {{#loading}}
+    <div id="bpt-shopping-cart-message">
+        <img id="bpt-loading-gif" />
+        Processing Cart
+    </div>
+    {{/}}
+    {{#message}}
+    <div id="bpt-shopping-cart-message">
+        {{message}}
+    </div>
+    {{/message}}
+
+    {{#if prices }}
+        {{ #prices:i }}
+            {{ #if quantity !== "0" }}
+        <div class="bpt-shopping-cart-tickets">
+            <span class="bpt-shopping-cart-event-name"><a href="#bpt-event-{{eventId}}">{{ eventTitle }}</a></span>
+            <span class="bpt-shopping-cart-price-name">{{ name }}</span>
+            <span class="bpt-shopping-cart-price-value">{{currency(cartValue.cartCurrency)}}{{ value }}</span>
+            <span calss="bpt-shopping-cart-price-quantity">
+                <select name="quantity" value="{{quantity}}">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+                <a class="bpt-remove-ticket" href="#bpt-remove-ticket" on-click="removeTicket">remove</a>
+            </span>
+        </div>
+            {{ /if }}
+        {{ /prices }}
+
+        {{ #if prices}}
+            <div class="bpt-shopping-cart-shipping-info">
+                <h3>Shipping Information</h3>
+                <div id="bpt-shopping-cart-name">
+                    <label for="shipping-info-first-name">First Name</label>
+                    <input id="shipping-info-first-name" type="text" name="shippingInfo[firstName]"value="{{ shippingInfo.firstName }}">
+                    <label for="shipping-info-last-name">Last Name</label>
+                    <input id="shipping-info-last-name" type="text" value="{{ shippingInfo.lastName }}">
+                </div>
+
+                <label for="shipping-info-address">Address</label>
+                <input id="shipping-info-address" type="text" name="address" value="{{ shippingInfo.address }}">
+                <label for="shipping-info-address2">Address 2</label>
+                <input id="shipping-info-address2" type="text" name="addres2" value="{{ shippingInfo.address2 }}">
+
+                <label for="shipping-info-city">City</label>
+                <input id="shipping-info-city" type="text" value="{{ shippingInfo.city }}">
+
+                <label for="shipping-info-state">State</label>
+                <input id="shipping-info-state" type="text" value="{{ shippingInfo.state }}">
+
+                <label for="shipping-info-zip">Zip</label>
+                <input id="shipping-info-zip" type="text" value="{{ shippingInfo.zip }}">
+
+                <label for="shipping-info-country">Country</label>
+                <select value="{{ shippingInfo.country }}" id="shipping-info-country">
+                {{ #countries }}
+                    {{ #if . === "United States" }}
+                        <option value="{{ . }}" selected>{{ . }}</option>
+                    {{ else }}
+                        <option value="{{ . }}">{{ . }}</option>
+                    {{ /if }}
+                {{ /countries}}
+                </select>
+
+                <label for="shipping-info-email">Email</label>
+                <input id="shipping-info-email" type="text" value="{{ shippingInfo.email }}">
+
+                <label for="shipping-info-phone">Phone</label>
+                <input id="shipping-info-phone" type="telephone" value="{{ shippingInfo.phone }}">
+            </div>
+            <div class="bpt-shopping-cart-billing-info">
+                <h3>Billing Information</h3>
+                <label for="shipping-same-as-billing">Same as Shipping</label>
+                <input id="shipping-same-as-billing" type="checkbox" on-click="billingIsShipping" checked="{{ billingIsShipping }}">
+
+                <label for="billing-info-first-name">First Name</label>
+                <input id="billing-info-first-name" type="text" name="billingInfo[firstName]"value="{{ billingInfo.firstName }}">
+                <label for="billing-info-last-name">Last Name</label>
+                <input id="billing-info-last-name" type="text" value="{{ billingInfo.lastName }}">
+
+                <label for="billing-info-address">Address</label>
+                <input id="billing-info-address" type="text" name="address" value="{{ billingInfo.address }}">
+                <label for="billing-info-address2">Address 2</label>
+                <input id="billing-info-address2" type="text" name="addres2" value="{{ billingInfo.address2 }}">
+
+                <label for="billing-info-city">City</label>
+                <input id="billing-info-city" type="text" value="{{ billingInfo.city }}">
+
+
+                <label for="billing-info-state">State</label>
+                <input id="billing-info-state" type="text" value="{{ billingInfo.state }}">
+
+                <label for="billing-info-zip">Zip</label>
+                <input id="billing-info-zip" type="text" value="{{ billingInfo.zip }}">
+                <select value="{{ billingInfo.country }}" id="shipping-info-country">
+                {{ #countries }}
+                    <option value="{{ . }}">{{ . }}</option>
+                {{ /countries}}
+                </select>
+                <h4>Credit Card</h4>
+                <label for="billing-info-cc-number">Credit Card Number</label>
+                <input type="billing-info-cc-number" type="text" value="{{ billingInfo.ccNumber }}">
+
+                <label for="billing-info-cc-exp-month">Expiration Month</label>
+                <input id="billing-info-cc-exp-month" type="text" value="{{ billingInfo.ccType }}">
+                <label for="billing-info-cc-exp-year">Expiration Year</label>
+                <input id="billing-info-cc-exp-year" type="text" value="{{ billingInfo.ccType }}">
+
+                <label for="billing-info-cc-exp-cvv">Security Code</label>
+                <input id="billing-info-cc-exp-cvv" type="text" value="{{ billingInfo.ccCvv }}">
+
+                <label for="billing-info-cc-type">Type</label>
+                <select id="billing-info-cc-type" name="{{ creditCardInfo.ccType }}">
+                    <option value="visa">Visa</option>
+                    <option value="mc">MasterCard</option>
+                    <option value="discover">Discover</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </div>
+        {{/if}}
+
+        <div id="bpt-shopping-cart-total">
+            <span class="bpt-shopping-cart-value">Total: {{currency(cartValue.cartCurrency)}}{{cartValue.cartValue}}</span>
+        </div>
+        <div id="bpt-shopping-cart-buttons">
+            <button id="bpt-shopping-cart-update" on-click="updateCart">Update Cart</button>
+            <button id="bpt-shopping-cart-checkout" on-click="checkout">Checkout</button>
+        </div>
+    {{/if }}
+
+    {{^prices}}
+        Your cart is empty.
+    {{/}}
+
+
+    {{ #billingInfo }}
+
+    {{/}}
+</div>

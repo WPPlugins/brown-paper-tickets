@@ -1,0 +1,128 @@
+/**
+ * Calendar Controls
+ */
+.bpt-calendar-widget-controls {
+    width: 100%;
+    float: left;
+}
+.bpt-calendar-widget-controls-month {
+    width: 80%;
+    padding: 5px;
+    font-size: 2em;
+    line-height: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+}
+
+.bpt-calendar-shortcode .bpt-calendar-widget-controls-button,
+.bpt-calendar-widget .bpt-calendar-widget-controls-button {
+    width: 10%;
+    float: left;
+    font-size: 2em;
+    line-height: 1.5em;
+    cursor: pointer;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bpt-calendar-shortcode .bpt-calendar-widget-controls-previous-button,
+.bpt-calendar-widget .bpt-calendar-widget-controls-previous-button {
+    padding: 5px;
+    float: left;
+}
+
+.bpt-calendar-shortcode .bpt-calendar-widget-controls-next-button,
+.bpt-calendar-widget .bpt-calendar-widget-controls-next-button {
+    padding: 5px;
+    float: right;
+}
+
+.bpt-calendar-shortcode .clndr
+.bpt-calendar-widget .clndr {
+    width: 100%;
+    float: left;
+}
+    .bpt-calendar-shortcode .bpt-calendar-widget-table,
+    .bpt-calendar-widget .bpt-calendar-widget-table {
+        clear: both;
+        border: 1px solid #D1D2D4;
+        border-bottom: 3px solid #D1D2D4;
+        color: #000;
+        width: 100%;
+    }
+    .bpt-calendar-shortcode  .bpt-calendar-widget-header-day,
+    .bpt-calendar-widget .bpt-calendar-widget-header-day {
+        font-weight: bold;
+        text-align: center;
+        background: #ECEDED;
+        border-right: 1px solid #D1D2D4;
+    }
+    .bpt-calendar-shortcode .bpt-calendar-widget-header-day:last-child,
+    .bpt-calendar-widget .bpt-calendar-widget-header-day:last-child {
+        border-right: 0;
+    }
+
+
+    .bpt-calendar-shortcode .day,
+    .bpt-calendar-widget .day {
+        text-align: center;
+        border-top: 1px solid #D1D2D4;
+        border-right: 1px solid #D1D2D4;
+        background: #ECEDED;
+        cursor: pointer;
+    }
+    
+
+    /**
+     * These are days that contain events.
+     */
+    .bpt-calendar-shortcode .event,
+    .bpt-calendar-widget .event {
+        background: url("../img/bpt-button-bottom.png") repeat-x scroll center top / 50% 50% #DD7727;
+        border: 1px solid #D97E36;
+        box-shadow: 1px 1px 2px #B8B8B8;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /**
+     * This is the selected day.
+     */
+    
+    .bpt-calendar-shortcode .bpt-calendar-selected-day,
+    .bpt-calendar-widget .bpt-calendar-selected-day {
+        background: #12B7C6;
+        border: 1px solid #12B7C6;
+        box-shadow: 1px 1px 2px #B8B8B8;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .bpt-calendar-shortcode .adjacent-month,
+    .bpt-calendar-widget .adjacent-month {
+        color: #D1D2D4;
+    }
+
+    .bpt-calendar-shortcode .day:last-child,
+    .bpt-calendar-widget .day:last-child {
+        border-right: 0;
+    }
+
+/**
+ * Event Display Formatting
+ */
+
+.bpt-calendar-widget-event-view-event-container {
+    margin-bottom: 10px;
+}
+
+.bpt-calendar-widget-event-view-buy-tickets {
+    color: inherit;
+}

@@ -1,0 +1,225 @@
+.hidden {
+    display: none;
+}
+
+
+.bpt-event-list {
+}
+.bpt-show-full-description {
+    font-size: .8em;
+}
+
+/**
+ * Default Template CSS
+ */
+
+.bpt-default-theme.bpt-event {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+    .bpt-default-theme.bpt-event {
+        background: #ECEDED;
+        border: 1px solid #D1D2D4;
+        border-bottom: 6px solid #D1D2D4;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .bpt-default-theme.bpt-event h2.bpt-event-title {
+        text-transform: none;
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .bpt-default-theme.bpt-event div.bpt-event-location {
+        font-size: .8em;
+        max-width: -moz-fit-content;
+        max-width: -webkit-fit-content;
+        max-width: fit-content;
+        margin-bottom: 10px;
+    }
+
+    .bpt-default-theme.bpt-event .event-dates {
+        margin-bottom: 5px;
+
+    }
+    .bpt-default-theme.bpt-event .event-dates label {
+        display: none;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    .bpt-default-theme.bpt-event select.bpt-date-select {
+        max-width: -moz-fit-content;
+        max-width: -webkit-fit-content;
+        max-width: fit-content;
+        min-width: 100%;
+        padding: 5px 0;
+        font-size: 1.1em;
+    }
+
+    .bpt-default-theme.bpt-event table {
+        float: left;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .bpt-default-theme.bpt-event table,
+    .bpt-default-theme.bpt-event fieldset {
+        border: 0;
+        padding: 0;
+    }
+
+
+    .bpt-default-theme.bpt-event tr,
+    .bpt-default-theme.bpt-event th,
+    .bpt-default-theme.bpt-event td {
+        padding: 0;
+        border: 0;
+    }
+
+    .bpt-default-theme.bpt-event tr {
+        padding-bottom: 10px;
+    }
+
+    .bpt-default-theme.bpt-event th {
+        border-bottom: 1px solid #D1D2D4;
+        font-family: sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: .8em;
+    }
+
+    .bpt-default-theme.bpt-event th,
+    .bpt-default-theme.bpt-event td {
+        width: 30%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .bpt-default-theme.bpt-event .shipping-info label {
+        display: block;
+    }
+
+    .bpt-default-theme.bpt-event .shipping-info label.bpt-shipping-country-label {
+        font-size: .8em;
+    }
+    .bpt-default-theme.bpt-event select.bpt-price-qty {
+        margin: 0 auto;
+    }
+
+    .bpt-default-theme.bpt-event select.bpt-shipping-method {
+        margin-bottom: 10px;
+    }
+
+    .bpt-default-theme.bpt-event select.bpt-shipping-country {
+        font-size: .8em;
+    }
+
+
+    .bpt-default-theme.bpt-event input {
+        width: 100%;
+        display: inline-block;
+        border: 1px solid #D1D2D4;
+        padding: 5px;
+        clear: both;
+    }
+
+    /**
+     * Admin Options
+     */
+    .bpt-default-theme tr.bpt-admin-option {
+        border-bottom: 1px solid #D1D2D4;
+    }
+
+    .bpt-default-theme tr.bpt-admin-option td {
+        text-align: left;
+    }
+
+    .bpt-default-theme tr.bpt-admin-option h5 {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .bpt-default-theme tr.bpt-admin-option span {
+        margin-right: 15px;
+    }
+
+    .bpt-default-theme label.bpt-admin-option {
+        font-size: 10px;
+        display: inline-block;
+    }
+
+    .bpt-default-theme input.bpt-admin-option,
+    .bpt-default-theme select.bpt-admin-option {
+        font-size: 10px;
+        text-align: center;
+        width: 50px;
+    }
+
+    .bpt-default-theme.bpt-event button.bpt-submit {
+        background: url("../img/bpt-button-bottom.png") repeat-x scroll center top / 50% 50% #DD7727;
+        border: 1px solid #D97E36;
+        box-shadow: 1px 1px 2px #B8B8B8;
+        color: #ffffff;
+        cursor: pointer;
+        font-family: Helvetica,Arial,Sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 6px 18px;
+        text-transform: none;
+        float: right;
+    }
+
+    .bpt-default-theme.bpt-event div.bpt-add-to-cart {
+        margin-top: 15px;
+        width: 100%;
+        float: left;
+    }
+
+        .bpt-default-theme.bpt-event span.bpt-cc-logos {
+            margin-right: 15px;
+            float: right;
+        }
+
+    .bpt-default-theme.bpt-event div.bpt-powered-by {
+        width: 100%;
+        margin-top: 15px;
+        float: left;
+        text-transform: uppercase;
+        font-size: .5em;
+    }
+
+    .bpt-default-theme.bpt-event div.bpt-powered-by span {
+        display: inline-block;
+        margin-right: 5px;
+        line-height: 32px;
+        height: 32px;
+        float: left;
+    }
+
+    .bpt-default-theme.bpt-event div.bpt-powered-by img {
+        display: inline-block;
+        float: left;
+    }
+
+/**
+ * Hidden Prices Styling
+ */
+
+a.bpt-hide-price {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: red;
+    padding: 0 3px;
+    text-decoration: none;
+}
+
+a.bpt-unhide-price {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: green;
+    padding: 0 3px;
+    text-decoration: none;
+}

@@ -1,0 +1,57 @@
+
+
+div.bpt-setup-wizard {
+    background: #ffffff;
+    border: 1px solid #D1D2D4;
+    border-bottom: 6px solid #D1D2D4;
+    padding: 50px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+div.bpt-setup-wizard pre {
+    height: 200px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+    .dev-id-wrapper {
+
+    }
+
+.bpt-setup-wizard-button-container {
+    width: 100%;
+    margin-top: 50px;
+
+}
+    .dev-id-wrapper input,
+    .client-id-wrapper input {
+        background: none repeat scroll 0 0 padding-box #FFFFFF;
+        border-color: #C9CED0;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px 2px 1px 1px;
+        color: #5C6671;
+        padding: 11px 0 11px 16px;
+    }
+    
+    .bpt-setup-wizard .bpt-setup-wizard-next-step {
+        float: right;
+    }
+
+    .bpt-setup-wizard .bpt-setup-wizard-ajax-call {
+        font-weight: bold;
+        margin: 0 auto;
+    }
+
+    .bpt-setup-wizard-event-list li {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .bpt-setup-wizard-save {
+        float: right;
+    }
+
+    #bpt-setup-wizard-response {
+        margin-top: 25px;
+    }

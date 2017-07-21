@@ -1,0 +1,63 @@
+div#bpt-shopping-cart {
+    background: none repeat scroll 0% 0% #ECEDED;
+    border-width: 1px 1px 6px;
+    border-style: solid;
+    border-color: #D1D2D4;
+    border-image: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    float: left;
+}
+
+div#bpt-shopping-cart-message {
+    background: #F1F1F1;
+    padding: 5px;
+    border: 1px solid #D1D2D4;
+    text-align: center;
+}
+
+div#bpt-shopping-cart select {
+    margin: 0;
+    display: inline;
+}
+
+div.bpt-shopping-cart-tickets {
+    border-bottom: 1px solid #D1D2D4;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+    div.bpt-shopping-cart-tickets span {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        width: 24%;
+    }
+
+
+
+div#bpt-shopping-cart-buttons {
+    width: 100%;
+    text-align: right;
+}
+
+    button#bpt-shopping-cart-update,
+    button#bpt-shopping-cart-checkout {
+    }
+
+    button#bpt-shopping-cart-update {
+
+    }
+
+    button#bpt-shopping-cart-checkout {
+
+    }
+
+    div#shopping-cart-shipping-info {
+
+    }
+
+    div#bpt-shopping-cart-name {
+        width: 100%;
+        margin-bottom: 10px;
+    }
